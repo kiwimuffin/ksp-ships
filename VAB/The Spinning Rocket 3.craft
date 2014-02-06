@@ -1,0 +1,3541 @@
+ship = The Spinning Rocket 3
+version = 0.23.0
+description = 
+type = VAB
+PART
+{
+	part = Mark1-2Pod_4294427230
+	partName = Part
+	pos = -0.7078053,22.58166,0.0422869
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = parachuteLarge_4294427134
+	link = asasmodule1-2_4294427086
+	attN = bottom,asasmodule1-2_4294427086
+	attN = top,parachuteLarge_4294427134
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		controlSrcStatusText = 
+		EVENTS
+		{
+			MakeReference
+			{
+				active = True
+				guiActive = True
+				guiIcon = Control From Here
+				guiName = Control From Here
+				category = Control From Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RenameVessel
+			{
+				active = True
+				guiActive = True
+				guiIcon = Rename Vessel
+				guiName = Rename Vessel
+				category = Rename Vessel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = Active
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		EVENTS
+		{
+			DeployExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = True
+				guiActive = False
+				guiIcon = 
+				guiName = 
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.5
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = True
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Data
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			ResetAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceContainer
+		isEnabled = True
+		EVENTS
+		{
+			StoreDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Store Experiments (0)
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Take Data (0)
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Stored Data (0)
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Surfaced
+		{
+		}
+		Flew
+		{
+		}
+		FlewBy
+		{
+		}
+		Orbited
+		{
+		}
+		SubOrbited
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 150
+		maxAmount = 150
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = MonoPropellant
+		amount = 30
+		maxAmount = 30
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = parachuteLarge_4294427134
+	partName = Part
+	pos = -0.7078053,23.77692,0.0422869
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = 0
+	sqor = 0
+	attm = 0
+	attN = bottom,Mark1-2Pod_4294427230
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleParachute
+		isEnabled = True
+		persistentState = STOWED
+		deployAltitude = 500
+		minAirPressureToOpen = 0.01
+		staged = False
+		deployAltitude_UIFlight
+		{
+			controlEnabled = True
+			minValue = 50
+			maxValue = 5000
+			stepIncrement = 50
+		}
+		minAirPressureToOpen_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0.01
+			maxValue = 0.5
+			stepIncrement = 0.01
+		}
+		EVENTS
+		{
+			Deploy
+			{
+				active = True
+				guiActive = True
+				guiIcon = Deploy Chute
+				guiName = Deploy Chute
+				category = Deploy Chute
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			CutParachute
+			{
+				active = False
+				guiActive = True
+				guiIcon = Cut Parachute
+				guiName = Cut Parachute
+				category = Cut Parachute
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Repack
+			{
+				active = False
+				guiActive = False
+				guiIcon = Repack Chute
+				guiName = Repack Chute
+				category = Repack Chute
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			CutAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = asasmodule1-2_4294427086
+	partName = Part
+	pos = -0.7078053,21.85242,0.0422869
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = fuelTank3-2_4294427058
+	link = sweptWing_4294411812
+	link = sweptWing_4294406916
+	link = sweptWing_4294406788
+	link = sweptWing_4294406660
+	link = sweptWing_4294406532
+	link = sweptWing_4294406404
+	attN = top,Mark1-2Pod_4294427230
+	attN = bottom,fuelTank3-2_4294427058
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = Active
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = fuelTank3-2_4294427058
+	partName = Part
+	pos = -0.7078053,17.85242,0.0422869
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = Mk1FuselageStructural_4294426902
+	link = Mk1FuselageStructural_4294426842
+	link = Mk1FuselageStructural_4294426782
+	link = Mk1FuselageStructural_4294426722
+	link = Mk1FuselageStructural_4294426662
+	link = Mk1FuselageStructural_4294426602
+	link = sweptWing_4294415782
+	link = sweptWing_4294415332
+	link = sweptWing_4294415300
+	link = sweptWing_4294415268
+	link = sweptWing_4294415236
+	link = sweptWing_4294415204
+	link = sweptWing_4294415172
+	link = sweptWing_4294415140
+	attN = top,asasmodule1-2_4294427086
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 2880
+		maxAmount = 2880
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 3520
+		maxAmount = 3520
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = Mk1FuselageStructural_4294426902
+	partName = Strut
+	pos = 0.1535496,18.26129,-0.8190675
+	rot = 0.6532815,-0.2705981,-0.270598,-0.6532815
+	attRot = 0.4999999,0.4999999,0.4999999,-0.4999999
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = fuelTank.long_4294426874
+	sym = Mk1FuselageStructural_4294426842
+	sym = Mk1FuselageStructural_4294426782
+	sym = Mk1FuselageStructural_4294426722
+	sym = Mk1FuselageStructural_4294426662
+	sym = Mk1FuselageStructural_4294426602
+	srfN = srfAttach,fuelTank3-2_4294427058
+	attN = bottom,fuelTank.long_4294426874
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = fuelTank.long_4294426874
+	partName = Part
+	pos = 2.151125,18.26129,1.178509
+	rot = 0.2705982,0.2705981,-0.6532815,-0.6532816
+	attRot = -0.7071067,-0.7071067,0,0
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = radialEngineBody_4294425878
+	sym = fuelTank.long_4294426814
+	sym = fuelTank.long_4294426754
+	sym = fuelTank.long_4294426694
+	sym = fuelTank.long_4294426634
+	sym = fuelTank.long_4294426574
+	attN = top,Mk1FuselageStructural_4294426902
+	attN = bottom,radialEngineBody_4294425878
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 360
+		maxAmount = 360
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 440
+		maxAmount = 440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = radialEngineBody_4294425878
+	partName = Strut
+	pos = 4.156657,18.26129,3.184042
+	rot = 0.2705981,0.6532816,0.6532816,-0.270598
+	attRot = 0.7071067,0,0,-0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = liquidEngine_4294425554
+	sym = radialEngineBody_4294425906
+	sym = radialEngineBody_4294425850
+	sym = radialEngineBody_4294425822
+	sym = radialEngineBody_4294425794
+	sym = radialEngineBody_4294425766
+	attN = top,liquidEngine_4294425554
+	attN = bottom,fuelTank.long_4294426874
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = liquidEngine_4294425554
+	partName = Part
+	pos = 5.457265,18.26129,4.484655
+	rot = 0.270598,-0.6532817,0.6532815,0.2705981
+	attRot = 0.7071067,0,0,0.7071067
+	mir = 1,1,1
+	istg = 1
+	dstg = 0
+	sidx = 2
+	sqor = 1
+	attm = 0
+	sym = liquidEngine_4294425738
+	sym = liquidEngine_4294425646
+	sym = liquidEngine_4294425462
+	sym = liquidEngine_4294425370
+	sym = liquidEngine_4294425278
+	attN = top,radialEngineBody_4294425878
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = Mk1FuselageStructural_4294426842
+	partName = Strut
+	pos = -1.023083,18.26129,-1.134346
+	rot = 0.4304594,-0.5609856,-0.5609854,-0.4304593
+	attRot = 0.4999999,0.4999999,0.4999999,-0.4999999
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = fuelTank.long_4294426814
+	sym = Mk1FuselageStructural_4294426902
+	sym = Mk1FuselageStructural_4294426782
+	sym = Mk1FuselageStructural_4294426722
+	sym = Mk1FuselageStructural_4294426662
+	sym = Mk1FuselageStructural_4294426602
+	srfN = srfAttach,fuelTank3-2_4294427058
+	attN = bottom,fuelTank.long_4294426814
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = fuelTank.long_4294426814
+	partName = Part
+	pos = 1.705655,18.26129,-1.865508
+	rot = -0.09229582,-0.092296,-0.7010574,-0.7010574
+	attRot = -0.7071067,-0.7071067,0,0
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = radialEngineBody_4294425850
+	sym = fuelTank.long_4294426874
+	sym = fuelTank.long_4294426754
+	sym = fuelTank.long_4294426694
+	sym = fuelTank.long_4294426634
+	sym = fuelTank.long_4294426574
+	attN = top,Mk1FuselageStructural_4294426842
+	attN = bottom,radialEngineBody_4294425850
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 360
+		maxAmount = 360
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 440
+		maxAmount = 440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = radialEngineBody_4294425850
+	partName = Strut
+	pos = 4.445263,18.26129,-2.599584
+	rot = 0.5609856,0.4304594,0.4304593,-0.5609855
+	attRot = 0.7071067,0,0,-0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = liquidEngine_4294425462
+	sym = radialEngineBody_4294425906
+	sym = radialEngineBody_4294425878
+	sym = radialEngineBody_4294425822
+	sym = radialEngineBody_4294425794
+	sym = radialEngineBody_4294425766
+	attN = top,liquidEngine_4294425462
+	attN = bottom,fuelTank.long_4294426814
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = liquidEngine_4294425462
+	partName = Part
+	pos = 6.22192,18.26129,-3.075639
+	rot = 0.5609853,-0.4304594,0.4304593,0.5609857
+	attRot = 0.7071067,0,0,0.7071067
+	mir = 1,1,1
+	istg = 1
+	dstg = 0
+	sidx = 3
+	sqor = 1
+	attm = 0
+	sym = liquidEngine_4294425738
+	sym = liquidEngine_4294425646
+	sym = liquidEngine_4294425554
+	sym = liquidEngine_4294425370
+	sym = liquidEngine_4294425278
+	attN = top,radialEngineBody_4294425850
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = Mk1FuselageStructural_4294426782
+	partName = Strut
+	pos = -1.884438,18.26129,-0.2729909
+	rot = 0.09229601,-0.7010575,-0.7010574,-0.09229586
+	attRot = 0.4999999,0.4999999,0.4999999,-0.4999999
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = fuelTank.long_4294426754
+	sym = Mk1FuselageStructural_4294426902
+	sym = Mk1FuselageStructural_4294426842
+	sym = Mk1FuselageStructural_4294426722
+	sym = Mk1FuselageStructural_4294426662
+	sym = Mk1FuselageStructural_4294426602
+	srfN = srfAttach,fuelTank3-2_4294427058
+	attN = bottom,fuelTank.long_4294426754
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = fuelTank.long_4294426754
+	partName = Part
+	pos = -1.153273,18.26129,-3.001731
+	rot = -0.4304592,-0.4304595,-0.5609856,-0.5609856
+	attRot = -0.7071067,-0.7071067,0,0
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = radialEngineBody_4294425822
+	sym = fuelTank.long_4294426874
+	sym = fuelTank.long_4294426814
+	sym = fuelTank.long_4294426694
+	sym = fuelTank.long_4294426634
+	sym = fuelTank.long_4294426574
+	attN = top,Mk1FuselageStructural_4294426782
+	attN = bottom,radialEngineBody_4294425822
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 360
+		maxAmount = 360
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 440
+		maxAmount = 440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = radialEngineBody_4294425822
+	partName = Strut
+	pos = -0.4191935,18.26129,-5.741344
+	rot = 0.7010576,0.09229609,0.0922959,-0.7010574
+	attRot = 0.7071067,0,0,-0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = liquidEngine_4294425738
+	sym = radialEngineBody_4294425906
+	sym = radialEngineBody_4294425878
+	sym = radialEngineBody_4294425850
+	sym = radialEngineBody_4294425794
+	sym = radialEngineBody_4294425766
+	attN = top,liquidEngine_4294425738
+	attN = bottom,fuelTank.long_4294426754
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = liquidEngine_4294425738
+	partName = Part
+	pos = 0.05686283,18.26129,-7.518005
+	rot = 0.7010573,-0.09229596,0.09229602,0.7010577
+	attRot = 0.7071067,0,0,0.7071067
+	mir = 1,1,1
+	istg = 1
+	dstg = 0
+	sidx = 0
+	sqor = 1
+	attm = 0
+	sym = liquidEngine_4294425646
+	sym = liquidEngine_4294425554
+	sym = liquidEngine_4294425462
+	sym = liquidEngine_4294425370
+	sym = liquidEngine_4294425278
+	attN = top,radialEngineBody_4294425822
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = Mk1FuselageStructural_4294426722
+	partName = Strut
+	pos = -1.56916,18.26129,0.9036413
+	rot = -0.270598,-0.6532815,-0.6532815,0.2705982
+	attRot = 0.4999999,0.4999999,0.4999999,-0.4999999
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = fuelTank.long_4294426694
+	sym = Mk1FuselageStructural_4294426902
+	sym = Mk1FuselageStructural_4294426842
+	sym = Mk1FuselageStructural_4294426782
+	sym = Mk1FuselageStructural_4294426662
+	sym = Mk1FuselageStructural_4294426602
+	srfN = srfAttach,fuelTank3-2_4294427058
+	attN = bottom,fuelTank.long_4294426694
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = fuelTank.long_4294426694
+	partName = Part
+	pos = -3.566736,18.26129,-1.093936
+	rot = -0.6532815,-0.6532816,-0.2705982,-0.2705981
+	attRot = -0.7071067,-0.7071067,0,0
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = radialEngineBody_4294425906
+	sym = fuelTank.long_4294426874
+	sym = fuelTank.long_4294426814
+	sym = fuelTank.long_4294426754
+	sym = fuelTank.long_4294426634
+	sym = fuelTank.long_4294426574
+	attN = top,Mk1FuselageStructural_4294426722
+	attN = bottom,radialEngineBody_4294425906
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 360
+		maxAmount = 360
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 440
+		maxAmount = 440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = radialEngineBody_4294425906
+	partName = Strut
+	pos = -5.572275,18.26129,-3.099472
+	rot = 0.6532815,-0.270598,-0.2705981,-0.6532816
+	attRot = 0.7071067,0,0,-0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = liquidEngine_4294425646
+	sym = radialEngineBody_4294425878
+	sym = radialEngineBody_4294425850
+	sym = radialEngineBody_4294425822
+	sym = radialEngineBody_4294425794
+	sym = radialEngineBody_4294425766
+	attN = top,liquidEngine_4294425646
+	attN = bottom,fuelTank.long_4294426694
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = liquidEngine_4294425646
+	partName = Part
+	pos = -6.872879,18.2613,-4.400068
+	rot = 0.6532813,0.2705981,-0.270598,0.6532817
+	attRot = 0.7071067,0,0,0.7071067
+	mir = 1,1,1
+	istg = 1
+	dstg = 0
+	sidx = 1
+	sqor = 1
+	attm = 0
+	sym = liquidEngine_4294425738
+	sym = liquidEngine_4294425554
+	sym = liquidEngine_4294425462
+	sym = liquidEngine_4294425370
+	sym = liquidEngine_4294425278
+	attN = top,radialEngineBody_4294425906
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = Mk1FuselageStructural_4294426662
+	partName = Strut
+	pos = -0.3925278,18.26129,1.218919
+	rot = -0.5609855,-0.4304593,-0.4304594,0.5609857
+	attRot = 0.4999999,0.4999999,0.4999999,-0.4999999
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = fuelTank.long_4294426634
+	sym = Mk1FuselageStructural_4294426902
+	sym = Mk1FuselageStructural_4294426842
+	sym = Mk1FuselageStructural_4294426782
+	sym = Mk1FuselageStructural_4294426722
+	sym = Mk1FuselageStructural_4294426602
+	srfN = srfAttach,fuelTank3-2_4294427058
+	attN = bottom,fuelTank.long_4294426634
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = fuelTank.long_4294426634
+	partName = Part
+	pos = -3.121268,18.26129,1.950083
+	rot = -0.7010574,-0.7010575,0.09229586,0.09229603
+	attRot = -0.7071067,-0.7071067,0,0
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = radialEngineBody_4294425794
+	sym = fuelTank.long_4294426874
+	sym = fuelTank.long_4294426814
+	sym = fuelTank.long_4294426754
+	sym = fuelTank.long_4294426694
+	sym = fuelTank.long_4294426574
+	attN = top,Mk1FuselageStructural_4294426662
+	attN = bottom,radialEngineBody_4294425794
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 360
+		maxAmount = 360
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 440
+		maxAmount = 440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = radialEngineBody_4294425794
+	partName = Strut
+	pos = -5.860879,18.26129,2.684167
+	rot = 0.4304594,-0.5609856,-0.5609857,-0.4304594
+	attRot = 0.7071067,0,0,-0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = liquidEngine_4294425370
+	sym = radialEngineBody_4294425906
+	sym = radialEngineBody_4294425878
+	sym = radialEngineBody_4294425850
+	sym = radialEngineBody_4294425822
+	sym = radialEngineBody_4294425766
+	attN = top,liquidEngine_4294425370
+	attN = bottom,fuelTank.long_4294426634
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = liquidEngine_4294425370
+	partName = Part
+	pos = -7.637537,18.26129,3.160223
+	rot = 0.4304593,0.5609857,-0.5609856,0.4304595
+	attRot = 0.7071067,0,0,0.7071067
+	mir = 1,1,1
+	istg = 1
+	dstg = 0
+	sidx = 4
+	sqor = 1
+	attm = 0
+	sym = liquidEngine_4294425738
+	sym = liquidEngine_4294425646
+	sym = liquidEngine_4294425554
+	sym = liquidEngine_4294425462
+	sym = liquidEngine_4294425278
+	attN = top,radialEngineBody_4294425794
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = Mk1FuselageStructural_4294426602
+	partName = Strut
+	pos = 0.4688269,18.26129,0.357565
+	rot = -0.7010574,-0.09229593,-0.09229609,0.7010574
+	attRot = 0.4999999,0.4999999,0.4999999,-0.4999999
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = fuelTank.long_4294426574
+	sym = Mk1FuselageStructural_4294426902
+	sym = Mk1FuselageStructural_4294426842
+	sym = Mk1FuselageStructural_4294426782
+	sym = Mk1FuselageStructural_4294426722
+	sym = Mk1FuselageStructural_4294426662
+	srfN = srfAttach,fuelTank3-2_4294427058
+	attN = bottom,fuelTank.long_4294426574
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = fuelTank.long_4294426574
+	partName = Part
+	pos = -0.262338,18.26129,3.086305
+	rot = -0.5609856,-0.5609856,0.4304592,0.4304594
+	attRot = -0.7071067,-0.7071067,0,0
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = radialEngineBody_4294425766
+	sym = fuelTank.long_4294426874
+	sym = fuelTank.long_4294426814
+	sym = fuelTank.long_4294426754
+	sym = fuelTank.long_4294426694
+	sym = fuelTank.long_4294426634
+	attN = top,Mk1FuselageStructural_4294426602
+	attN = bottom,radialEngineBody_4294425766
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 360
+		maxAmount = 360
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 440
+		maxAmount = 440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = radialEngineBody_4294425766
+	partName = Strut
+	pos = -0.9964151,18.26129,5.825912
+	rot = 0.09229597,-0.7010574,-0.7010575,-0.09229606
+	attRot = 0.7071067,0,0,-0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = liquidEngine_4294425278
+	sym = radialEngineBody_4294425906
+	sym = radialEngineBody_4294425878
+	sym = radialEngineBody_4294425850
+	sym = radialEngineBody_4294425822
+	sym = radialEngineBody_4294425794
+	attN = top,liquidEngine_4294425278
+	attN = bottom,fuelTank.long_4294426574
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = liquidEngine_4294425278
+	partName = Part
+	pos = -1.472467,18.26129,7.602575
+	rot = 0.09229595,0.7010576,-0.7010573,0.092296
+	attRot = 0.7071067,0,0,0.7071067
+	mir = 1,1,1
+	istg = 1
+	dstg = 0
+	sidx = 5
+	sqor = 1
+	attm = 0
+	sym = liquidEngine_4294425738
+	sym = liquidEngine_4294425646
+	sym = liquidEngine_4294425554
+	sym = liquidEngine_4294425462
+	sym = liquidEngine_4294425370
+	attN = top,radialEngineBody_4294425766
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sweptWing_4294415782
+	partName = Winglet
+	pos = -0.7078054,14.4083,-1.166973
+	rot = -0.5,0.5000001,0.5000001,0.5
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294415076
+	sym = sweptWing_4294415332
+	sym = sweptWing_4294415300
+	sym = sweptWing_4294415268
+	sym = sweptWing_4294415236
+	sym = sweptWing_4294415204
+	sym = sweptWing_4294415172
+	sym = sweptWing_4294415140
+	srfN = srfAttach,fuelTank3-2_4294427058
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294415332
+	partName = Winglet
+	pos = -1.562881,14.4083,-0.8127885
+	rot = -0.270598,0.6532815,0.6532815,0.270598
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294414566
+	sym = sweptWing_4294415782
+	sym = sweptWing_4294415300
+	sym = sweptWing_4294415268
+	sym = sweptWing_4294415236
+	sym = sweptWing_4294415204
+	sym = sweptWing_4294415172
+	sym = sweptWing_4294415140
+	srfN = srfAttach,fuelTank3-2_4294427058
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294415300
+	partName = Winglet
+	pos = -1.917065,14.4083,0.04228695
+	rot = 6.322028E-08,0.7071068,0.7071068,-6.322028E-08
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294414534
+	sym = sweptWing_4294415782
+	sym = sweptWing_4294415332
+	sym = sweptWing_4294415268
+	sym = sweptWing_4294415236
+	sym = sweptWing_4294415204
+	sym = sweptWing_4294415172
+	sym = sweptWing_4294415140
+	srfN = srfAttach,fuelTank3-2_4294427058
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294415268
+	partName = Winglet
+	pos = -1.562881,14.4083,0.8973624
+	rot = 0.2705981,0.6532815,0.6532815,-0.2705981
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294414502
+	sym = sweptWing_4294415782
+	sym = sweptWing_4294415332
+	sym = sweptWing_4294415300
+	sym = sweptWing_4294415236
+	sym = sweptWing_4294415204
+	sym = sweptWing_4294415172
+	sym = sweptWing_4294415140
+	srfN = srfAttach,fuelTank3-2_4294427058
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294415236
+	partName = Winglet
+	pos = -0.707805,14.4083,1.251546
+	rot = 0.5000001,0.4999999,0.4999999,-0.5000001
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294414470
+	sym = sweptWing_4294415782
+	sym = sweptWing_4294415332
+	sym = sweptWing_4294415300
+	sym = sweptWing_4294415268
+	sym = sweptWing_4294415204
+	sym = sweptWing_4294415172
+	sym = sweptWing_4294415140
+	srfN = srfAttach,fuelTank3-2_4294427058
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294415204
+	partName = Winglet
+	pos = 0.1472704,14.4083,0.8973622
+	rot = 0.6532816,0.2705979,0.2705979,-0.6532816
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294414438
+	sym = sweptWing_4294415782
+	sym = sweptWing_4294415332
+	sym = sweptWing_4294415300
+	sym = sweptWing_4294415268
+	sym = sweptWing_4294415236
+	sym = sweptWing_4294415172
+	sym = sweptWing_4294415140
+	srfN = srfAttach,fuelTank3-2_4294427058
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294415172
+	partName = Winglet
+	pos = 0.501454,14.4083,0.04228671
+	rot = 0.7071068,-6.322028E-08,-6.322028E-08,-0.7071068
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294414406
+	sym = sweptWing_4294415782
+	sym = sweptWing_4294415332
+	sym = sweptWing_4294415300
+	sym = sweptWing_4294415268
+	sym = sweptWing_4294415236
+	sym = sweptWing_4294415204
+	sym = sweptWing_4294415140
+	srfN = srfAttach,fuelTank3-2_4294427058
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294415140
+	partName = Winglet
+	pos = 0.1472699,14.4083,-0.812789
+	rot = 0.6532815,-0.2705982,-0.2705982,-0.6532815
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294414374
+	sym = sweptWing_4294415782
+	sym = sweptWing_4294415332
+	sym = sweptWing_4294415300
+	sym = sweptWing_4294415268
+	sym = sweptWing_4294415236
+	sym = sweptWing_4294415204
+	sym = sweptWing_4294415172
+	srfN = srfAttach,fuelTank3-2_4294427058
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294415076
+	partName = Winglet
+	pos = 0.5436354,14.44415,-5.837411
+	rot = -0.5609856,0.4304594,0.4304593,0.5609856
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294414224
+	sym = sweptWing_4294414566
+	sym = sweptWing_4294414534
+	sym = sweptWing_4294414502
+	sym = sweptWing_4294414470
+	sym = sweptWing_4294414438
+	sym = sweptWing_4294414406
+	sym = sweptWing_4294414374
+	srfN = srfAttach,sweptWing_4294415782
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294414566
+	partName = Winglet
+	pos = -3.980477,14.44415,-5.000189
+	rot = -0.3535534,0.6123725,0.6123724,0.3535534
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294412306
+	sym = sweptWing_4294415076
+	sym = sweptWing_4294414534
+	sym = sweptWing_4294414502
+	sym = sweptWing_4294414470
+	sym = sweptWing_4294414438
+	sym = sweptWing_4294414406
+	sym = sweptWing_4294414374
+	srfN = srfAttach,sweptWing_4294415332
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294414534
+	partName = Winglet
+	pos = -6.587508,14.44415,-1.209154
+	rot = -0.09229602,0.7010574,0.7010574,0.09229598
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294412242
+	sym = sweptWing_4294415076
+	sym = sweptWing_4294414566
+	sym = sweptWing_4294414502
+	sym = sweptWing_4294414470
+	sym = sweptWing_4294414438
+	sym = sweptWing_4294414406
+	sym = sweptWing_4294414374
+	srfN = srfAttach,sweptWing_4294415300
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294414502
+	partName = Winglet
+	pos = -5.75028,14.44415,3.314958
+	rot = 0.1830126,0.6830127,0.6830127,-0.1830127
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294412178
+	sym = sweptWing_4294415076
+	sym = sweptWing_4294414566
+	sym = sweptWing_4294414534
+	sym = sweptWing_4294414470
+	sym = sweptWing_4294414438
+	sym = sweptWing_4294414406
+	sym = sweptWing_4294414374
+	srfN = srfAttach,sweptWing_4294415268
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294414470
+	partName = Winglet
+	pos = -1.959246,14.44415,5.921986
+	rot = 0.4304593,0.5609856,0.5609856,-0.4304594
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294412114
+	sym = sweptWing_4294415076
+	sym = sweptWing_4294414566
+	sym = sweptWing_4294414534
+	sym = sweptWing_4294414502
+	sym = sweptWing_4294414438
+	sym = sweptWing_4294414406
+	sym = sweptWing_4294414374
+	srfN = srfAttach,sweptWing_4294415236
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294414438
+	partName = Winglet
+	pos = 2.564867,14.44415,5.084763
+	rot = 0.6123725,0.3535534,0.3535534,-0.6123725
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294412050
+	sym = sweptWing_4294415076
+	sym = sweptWing_4294414566
+	sym = sweptWing_4294414534
+	sym = sweptWing_4294414502
+	sym = sweptWing_4294414470
+	sym = sweptWing_4294414406
+	sym = sweptWing_4294414374
+	srfN = srfAttach,sweptWing_4294415204
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294414406
+	partName = Winglet
+	pos = 5.171893,14.44415,1.293728
+	rot = 0.7010574,0.09229598,0.09229602,-0.7010574
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294411986
+	sym = sweptWing_4294415076
+	sym = sweptWing_4294414566
+	sym = sweptWing_4294414534
+	sym = sweptWing_4294414502
+	sym = sweptWing_4294414470
+	sym = sweptWing_4294414438
+	sym = sweptWing_4294414374
+	srfN = srfAttach,sweptWing_4294415172
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294414374
+	partName = Winglet
+	pos = 4.334671,14.44415,-3.230387
+	rot = 0.6830127,-0.1830128,-0.1830128,-0.6830127
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294411922
+	sym = sweptWing_4294415076
+	sym = sweptWing_4294414566
+	sym = sweptWing_4294414534
+	sym = sweptWing_4294414502
+	sym = sweptWing_4294414470
+	sym = sweptWing_4294414438
+	sym = sweptWing_4294414406
+	srfN = srfAttach,sweptWing_4294415140
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294414224
+	partName = Winglet
+	pos = 2.961756,14.40998,-10.02572
+	rot = -0.6123726,0.3535535,0.3535534,0.6123725
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294414192
+	sym = sweptWing_4294412306
+	sym = sweptWing_4294412242
+	sym = sweptWing_4294412178
+	sym = sweptWing_4294412114
+	sym = sweptWing_4294412050
+	sym = sweptWing_4294411986
+	sym = sweptWing_4294411922
+	srfN = srfAttach,sweptWing_4294415076
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294414192
+	partName = Winglet
+	pos = 6.380757,14.44582,-13.44472
+	rot = -0.6532817,0.2705981,0.2705979,0.6532816
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = sweptWing_4294412274
+	sym = sweptWing_4294412210
+	sym = sweptWing_4294412146
+	sym = sweptWing_4294412082
+	sym = sweptWing_4294412018
+	sym = sweptWing_4294411954
+	sym = sweptWing_4294411890
+	srfN = srfAttach,sweptWing_4294414224
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294412306
+	partName = Winglet
+	pos = -5.232187,14.40998,-9.671638
+	rot = -0.4304594,0.5609856,0.5609855,0.4304594
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294412274
+	sym = sweptWing_4294414224
+	sym = sweptWing_4294412242
+	sym = sweptWing_4294412178
+	sym = sweptWing_4294412114
+	sym = sweptWing_4294412050
+	sym = sweptWing_4294411986
+	sym = sweptWing_4294411922
+	srfN = srfAttach,sweptWing_4294414566
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294412274
+	partName = Winglet
+	pos = -5.232185,14.44582,-14.50683
+	rot = -0.5000002,0.5000001,0.4999999,0.5000001
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = sweptWing_4294414192
+	sym = sweptWing_4294412210
+	sym = sweptWing_4294412146
+	sym = sweptWing_4294412082
+	sym = sweptWing_4294412018
+	sym = sweptWing_4294411954
+	sym = sweptWing_4294411890
+	srfN = srfAttach,sweptWing_4294412306
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294412242
+	partName = Winglet
+	pos = -10.77582,14.40998,-3.627276
+	rot = -0.1830128,0.6830128,0.6830127,0.1830127
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294412210
+	sym = sweptWing_4294414224
+	sym = sweptWing_4294412306
+	sym = sweptWing_4294412178
+	sym = sweptWing_4294412114
+	sym = sweptWing_4294412050
+	sym = sweptWing_4294411986
+	sym = sweptWing_4294411922
+	srfN = srfAttach,sweptWing_4294414534
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294412210
+	partName = Winglet
+	pos = -14.19482,14.44583,-7.046277
+	rot = -0.2705983,0.6532816,0.6532815,0.2705982
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = sweptWing_4294414192
+	sym = sweptWing_4294412274
+	sym = sweptWing_4294412146
+	sym = sweptWing_4294412082
+	sym = sweptWing_4294412018
+	sym = sweptWing_4294411954
+	sym = sweptWing_4294411890
+	srfN = srfAttach,sweptWing_4294412242
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294412178
+	partName = Winglet
+	pos = -10.42173,14.40998,4.566669
+	rot = 0.09229586,0.7010574,0.7010575,-0.09229599
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294412146
+	sym = sweptWing_4294414224
+	sym = sweptWing_4294412306
+	sym = sweptWing_4294412242
+	sym = sweptWing_4294412114
+	sym = sweptWing_4294412050
+	sym = sweptWing_4294411986
+	sym = sweptWing_4294411922
+	srfN = srfAttach,sweptWing_4294414502
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294412146
+	partName = Winglet
+	pos = -15.25693,14.44582,4.566667
+	rot = -2.169207E-07,0.7071069,0.7071069,4.444999E-08
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = sweptWing_4294414192
+	sym = sweptWing_4294412274
+	sym = sweptWing_4294412210
+	sym = sweptWing_4294412082
+	sym = sweptWing_4294412018
+	sym = sweptWing_4294411954
+	sym = sweptWing_4294411890
+	srfN = srfAttach,sweptWing_4294412178
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294412114
+	partName = Winglet
+	pos = -4.377367,14.40998,10.11029
+	rot = 0.3535534,0.6123725,0.6123726,-0.3535535
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294412082
+	sym = sweptWing_4294414224
+	sym = sweptWing_4294412306
+	sym = sweptWing_4294412242
+	sym = sweptWing_4294412178
+	sym = sweptWing_4294412050
+	sym = sweptWing_4294411986
+	sym = sweptWing_4294411922
+	srfN = srfAttach,sweptWing_4294414470
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294412082
+	partName = Winglet
+	pos = -7.796368,14.44582,13.52929
+	rot = 0.2705979,0.6532816,0.6532817,-0.2705981
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = sweptWing_4294414192
+	sym = sweptWing_4294412274
+	sym = sweptWing_4294412210
+	sym = sweptWing_4294412146
+	sym = sweptWing_4294412018
+	sym = sweptWing_4294411954
+	sym = sweptWing_4294411890
+	srfN = srfAttach,sweptWing_4294412114
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294412050
+	partName = Winglet
+	pos = 3.816577,14.40998,9.756213
+	rot = 0.5609856,0.4304593,0.4304594,-0.5609857
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294412018
+	sym = sweptWing_4294414224
+	sym = sweptWing_4294412306
+	sym = sweptWing_4294412242
+	sym = sweptWing_4294412178
+	sym = sweptWing_4294412114
+	sym = sweptWing_4294411986
+	sym = sweptWing_4294411922
+	srfN = srfAttach,sweptWing_4294414438
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294412018
+	partName = Winglet
+	pos = 3.816576,14.44582,14.59141
+	rot = 0.5,0.5000001,0.5000002,-0.5000001
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = sweptWing_4294414192
+	sym = sweptWing_4294412274
+	sym = sweptWing_4294412210
+	sym = sweptWing_4294412146
+	sym = sweptWing_4294412082
+	sym = sweptWing_4294411954
+	sym = sweptWing_4294411890
+	srfN = srfAttach,sweptWing_4294412050
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294411986
+	partName = Winglet
+	pos = 9.3602,14.40998,3.71185
+	rot = 0.6830127,0.1830127,0.1830128,-0.6830128
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294411954
+	sym = sweptWing_4294414224
+	sym = sweptWing_4294412306
+	sym = sweptWing_4294412242
+	sym = sweptWing_4294412178
+	sym = sweptWing_4294412114
+	sym = sweptWing_4294412050
+	sym = sweptWing_4294411922
+	srfN = srfAttach,sweptWing_4294414406
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294411954
+	partName = Winglet
+	pos = 12.77919,14.44583,7.13085
+	rot = 0.6532815,0.2705982,0.2705983,-0.6532816
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = sweptWing_4294414192
+	sym = sweptWing_4294412274
+	sym = sweptWing_4294412210
+	sym = sweptWing_4294412146
+	sym = sweptWing_4294412082
+	sym = sweptWing_4294412018
+	sym = sweptWing_4294411890
+	srfN = srfAttach,sweptWing_4294411986
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294411922
+	partName = Winglet
+	pos = 9.006121,14.40998,-4.4821
+	rot = 0.7010574,-0.09229611,-0.09229597,-0.7010575
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294411890
+	sym = sweptWing_4294414224
+	sym = sweptWing_4294412306
+	sym = sweptWing_4294412242
+	sym = sweptWing_4294412178
+	sym = sweptWing_4294412114
+	sym = sweptWing_4294412050
+	sym = sweptWing_4294411986
+	srfN = srfAttach,sweptWing_4294414374
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294411890
+	partName = Winglet
+	pos = 13.84132,14.44583,-4.4821
+	rot = 0.7071069,-7.715844E-08,1.182591E-07,-0.7071069
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = sweptWing_4294414192
+	sym = sweptWing_4294412274
+	sym = sweptWing_4294412210
+	sym = sweptWing_4294412146
+	sym = sweptWing_4294412082
+	sym = sweptWing_4294412018
+	sym = sweptWing_4294411954
+	srfN = srfAttach,sweptWing_4294411922
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294411812
+	partName = Winglet
+	pos = -0.1031181,21.82089,-1.005062
+	rot = -0.6123725,0.3535534,0.3535534,0.6123725
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294411780
+	sym = sweptWing_4294406916
+	sym = sweptWing_4294406788
+	sym = sweptWing_4294406660
+	sym = sweptWing_4294406532
+	sym = sweptWing_4294406404
+	srfN = srfAttach,asasmodule1-2_4294427086
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294411780
+	partName = Winglet
+	pos = 3.315882,21.85674,-4.42406
+	rot = -0.6532816,0.270598,0.2705979,0.6532816
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294411748
+	sym = sweptWing_4294406884
+	sym = sweptWing_4294406756
+	sym = sweptWing_4294406628
+	sym = sweptWing_4294406500
+	sym = sweptWing_4294406372
+	srfN = srfAttach,sweptWing_4294411812
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294411748
+	partName = Winglet
+	pos = 7.504191,21.82257,-6.842179
+	rot = -0.6830128,0.1830127,0.1830126,0.6830128
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294411716
+	sym = sweptWing_4294406852
+	sym = sweptWing_4294406724
+	sym = sweptWing_4294406596
+	sym = sweptWing_4294406468
+	sym = sweptWing_4294406340
+	srfN = srfAttach,sweptWing_4294411780
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294411716
+	partName = Winglet
+	pos = 12.17463,21.85842,-8.093616
+	rot = -0.7010576,0.09229586,0.09229569,0.7010576
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = sweptWing_4294406820
+	sym = sweptWing_4294406692
+	sym = sweptWing_4294406564
+	sym = sweptWing_4294406436
+	sym = sweptWing_4294406308
+	srfN = srfAttach,sweptWing_4294411748
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406916
+	partName = Winglet
+	pos = -1.312492,21.82089,-1.005062
+	rot = -0.3535534,0.6123725,0.6123725,0.3535534
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294406884
+	sym = sweptWing_4294411812
+	sym = sweptWing_4294406788
+	sym = sweptWing_4294406660
+	sym = sweptWing_4294406532
+	sym = sweptWing_4294406404
+	srfN = srfAttach,asasmodule1-2_4294427086
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406884
+	partName = Winglet
+	pos = -2.563931,21.85674,-5.675502
+	rot = -0.4304595,0.5609856,0.5609855,0.4304594
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294406852
+	sym = sweptWing_4294411780
+	sym = sweptWing_4294406756
+	sym = sweptWing_4294406628
+	sym = sweptWing_4294406500
+	sym = sweptWing_4294406372
+	srfN = srfAttach,sweptWing_4294406916
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406852
+	partName = Winglet
+	pos = -2.563931,21.82257,-10.51174
+	rot = -0.5000002,0.5000001,0.5,0.5000001
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294406820
+	sym = sweptWing_4294411748
+	sym = sweptWing_4294406724
+	sym = sweptWing_4294406596
+	sym = sweptWing_4294406468
+	sym = sweptWing_4294406340
+	srfN = srfAttach,sweptWing_4294406884
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406820
+	partName = Winglet
+	pos = -1.312487,21.85842,-15.18218
+	rot = -0.5609859,0.4304594,0.4304592,0.5609857
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = sweptWing_4294411716
+	sym = sweptWing_4294406692
+	sym = sweptWing_4294406564
+	sym = sweptWing_4294406436
+	sym = sweptWing_4294406308
+	srfN = srfAttach,sweptWing_4294406852
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406788
+	partName = Winglet
+	pos = -1.91718,21.82089,0.04228691
+	rot = 1.744523E-08,0.7071068,0.7071068,-1.744523E-08
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294406756
+	sym = sweptWing_4294411812
+	sym = sweptWing_4294406916
+	sym = sweptWing_4294406660
+	sym = sweptWing_4294406532
+	sym = sweptWing_4294406404
+	srfN = srfAttach,asasmodule1-2_4294427086
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406756
+	partName = Winglet
+	pos = -6.587619,21.85674,-1.209155
+	rot = -0.09229606,0.7010575,0.7010574,0.09229603
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294406724
+	sym = sweptWing_4294411780
+	sym = sweptWing_4294406884
+	sym = sweptWing_4294406628
+	sym = sweptWing_4294406500
+	sym = sweptWing_4294406372
+	srfN = srfAttach,sweptWing_4294406788
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406724
+	partName = Winglet
+	pos = -10.77593,21.82257,-3.627277
+	rot = -0.1830129,0.6830128,0.6830128,0.1830128
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294406692
+	sym = sweptWing_4294411748
+	sym = sweptWing_4294406852
+	sym = sweptWing_4294406596
+	sym = sweptWing_4294406468
+	sym = sweptWing_4294406340
+	srfN = srfAttach,sweptWing_4294406756
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406692
+	partName = Winglet
+	pos = -14.19493,21.85842,-7.046279
+	rot = -0.2705984,0.6532816,0.6532816,0.2705982
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = sweptWing_4294411716
+	sym = sweptWing_4294406820
+	sym = sweptWing_4294406564
+	sym = sweptWing_4294406436
+	sym = sweptWing_4294406308
+	srfN = srfAttach,sweptWing_4294406724
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406660
+	partName = Winglet
+	pos = -1.312492,21.82089,1.089636
+	rot = 0.3535534,0.6123725,0.6123725,-0.3535534
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294406628
+	sym = sweptWing_4294411812
+	sym = sweptWing_4294406916
+	sym = sweptWing_4294406788
+	sym = sweptWing_4294406532
+	sym = sweptWing_4294406404
+	srfN = srfAttach,asasmodule1-2_4294427086
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406628
+	partName = Winglet
+	pos = -4.731493,21.85674,4.508634
+	rot = 0.270598,0.6532816,0.6532816,-0.270598
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294406596
+	sym = sweptWing_4294411780
+	sym = sweptWing_4294406884
+	sym = sweptWing_4294406756
+	sym = sweptWing_4294406500
+	sym = sweptWing_4294406372
+	srfN = srfAttach,sweptWing_4294406660
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406596
+	partName = Winglet
+	pos = -8.919803,21.82257,6.926754
+	rot = 0.1830126,0.6830128,0.6830128,-0.1830127
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294406564
+	sym = sweptWing_4294411748
+	sym = sweptWing_4294406852
+	sym = sweptWing_4294406724
+	sym = sweptWing_4294406468
+	sym = sweptWing_4294406340
+	srfN = srfAttach,sweptWing_4294406628
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406564
+	partName = Winglet
+	pos = -13.59024,21.85842,8.178191
+	rot = 0.09229571,0.7010576,0.7010576,-0.09229589
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = sweptWing_4294411716
+	sym = sweptWing_4294406820
+	sym = sweptWing_4294406692
+	sym = sweptWing_4294406436
+	sym = sweptWing_4294406308
+	srfN = srfAttach,sweptWing_4294406596
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406532
+	partName = Winglet
+	pos = -0.1031182,21.82089,1.089636
+	rot = 0.6123725,0.3535534,0.3535534,-0.6123725
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294406500
+	sym = sweptWing_4294411812
+	sym = sweptWing_4294406916
+	sym = sweptWing_4294406788
+	sym = sweptWing_4294406660
+	sym = sweptWing_4294406404
+	srfN = srfAttach,asasmodule1-2_4294427086
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406500
+	partName = Winglet
+	pos = 1.148321,21.85674,5.760076
+	rot = 0.5609855,0.4304594,0.4304594,-0.5609856
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294406468
+	sym = sweptWing_4294411780
+	sym = sweptWing_4294406884
+	sym = sweptWing_4294406756
+	sym = sweptWing_4294406628
+	sym = sweptWing_4294406372
+	srfN = srfAttach,sweptWing_4294406532
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406468
+	partName = Winglet
+	pos = 1.14832,21.82257,10.59632
+	rot = 0.5,0.5000001,0.5000002,-0.5000001
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294406436
+	sym = sweptWing_4294411748
+	sym = sweptWing_4294406852
+	sym = sweptWing_4294406724
+	sym = sweptWing_4294406596
+	sym = sweptWing_4294406340
+	srfN = srfAttach,sweptWing_4294406500
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406436
+	partName = Winglet
+	pos = -0.1031246,21.85842,15.26676
+	rot = 0.4304592,0.5609857,0.5609858,-0.4304594
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = sweptWing_4294411716
+	sym = sweptWing_4294406820
+	sym = sweptWing_4294406692
+	sym = sweptWing_4294406564
+	sym = sweptWing_4294406308
+	srfN = srfAttach,sweptWing_4294406468
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406404
+	partName = Winglet
+	pos = 0.501569,21.82089,0.0422872
+	rot = 0.7071068,5.837855E-08,5.837855E-08,-0.7071068
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294406372
+	sym = sweptWing_4294411812
+	sym = sweptWing_4294406916
+	sym = sweptWing_4294406788
+	sym = sweptWing_4294406660
+	sym = sweptWing_4294406532
+	srfN = srfAttach,asasmodule1-2_4294427086
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406372
+	partName = Winglet
+	pos = 5.172008,21.85674,1.29373
+	rot = 0.7010574,0.0922961,0.09229614,-0.7010574
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294406340
+	sym = sweptWing_4294411780
+	sym = sweptWing_4294406884
+	sym = sweptWing_4294406756
+	sym = sweptWing_4294406628
+	sym = sweptWing_4294406500
+	srfN = srfAttach,sweptWing_4294406404
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406340
+	partName = Winglet
+	pos = 9.360314,21.82257,3.711853
+	rot = 0.6830128,0.1830128,0.183013,-0.6830128
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294406308
+	sym = sweptWing_4294411748
+	sym = sweptWing_4294406852
+	sym = sweptWing_4294406724
+	sym = sweptWing_4294406596
+	sym = sweptWing_4294406468
+	srfN = srfAttach,sweptWing_4294406372
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294406308
+	partName = Winglet
+	pos = 12.77931,21.85842,7.130856
+	rot = 0.6532815,0.2705983,0.2705984,-0.6532816
+	attRot = 0,0,-0.7071067,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = sweptWing_4294411716
+	sym = sweptWing_4294406820
+	sym = sweptWing_4294406692
+	sym = sweptWing_4294406564
+	sym = sweptWing_4294406436
+	srfN = srfAttach,sweptWing_4294406340
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
